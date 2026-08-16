@@ -34,7 +34,7 @@ function LandingPage() {
           <h2>Apna video Call</h2>
         </div>
         <div className='navList'>
-          <p onClick={() => navigate("/$^24825*`")}>Join as Guest</p>
+          <p onClick={() => navigate("/24825")}>Join as Guest</p>
           <p onClick={() => navigate("/signUp")}>Register</p>
           <div role='button' onClick={() => navigate("/signIn")}>
             <p>Login</p>
