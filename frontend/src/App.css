@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.landingPageContainer{
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: url("background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.landingPageContainer nav{
+  padding-block: 1rem;
+  padding-inline:2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landingPageContainer nav h2{
+  font-size: 2rem;
+  font-weight: 450;
+}
+
+.landingPageContainer nav .navList{
+  display: flex;
+  gap: 1.9rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.navListForMobile{
+  display: none;
+}
+
+.landingMainContainer{
+  padding-inline:7rem;
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+  align-items: center;
+}
+
+.landingMainContainer .leftSide{
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.landingMainContainer .leftSide p{
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.landingMainContainer .leftSide div[role="button"]{
+  margin-top: 2rem;
+  background-color: #D97500;
+  width: fit-content;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.landingMainContainer .leftSide div[role="button"] a{
+  color: white;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+/* Authentication Folder */
+.authpagebg{
+  background: url("background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUpcallImg{
+  margin-right: -3rem;
+}
+.signUpcallImg img{
+  height: 525px;
+  border-radius:5px 0px 0px 5px;
+}
+.singIncallImg{
+  margin-right: -2.5rem;
+}
+.singIncallImg img{
+  height: 425px;
+  border-radius:5px 0px 0px 5px;
+}
+
+/* To Imprementetion the Mobile section with Media Query   */
+@media (max-width: 768px) {
+  .authpagebg {
+    width: 100%;
+  }
+  .singIncallImg{
+    display: none;
+  }
+  .signUpcallImg{
+    display: none;
+  }
+
+  /* Landing page  */
+  nav .navList{
+    display: none !important;
+  }
+  .leftSide{
+    width: 100vw;
+  }
+  .rigthSide{
+    display: none;
+  }
+  .landingMainContainer{
+    margin-left: -2.5rem;
+  }
+  .leftSide h1{
+    font-size: 2rem;
+    text-align: start;
+  }
+  .navListForMobile{
+    display: block;
+  }
+  .landingPageContainer nav{
+    margin-top: -1rem;
+    padding-inline:0.5rem;
+  }
+  .navHeader h2{
+    font-size: 25px !important;
+  }
+}

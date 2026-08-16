@@ -1,0 +1,300 @@
+.meetVideoContainer{
+  position: relative;
+  height: 100vh;
+  background: #030426;
+}
+.meetUserVideo{
+  position: absolute;
+  height: 20vh;
+  width: auto;
+  right: 0;
+  bottom: 25vh;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.LobbySection{
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 2rem;
+}
+.onCamaraVideo{
+  margin-top: 2rem;
+}
+.LobbySectionBtn button:nth-child(1){
+  margin-top: 8px;
+}
+.LobbySectionBtn button:nth-child(2){
+  margin-top: 8px;
+  margin-left: 2rem;
+}
+/* with Chat messages  */
+.meetUserVideoWithChat{
+  position: absolute;
+  height: 20vh;
+  width: auto;
+  right: 32vw;
+  bottom: 25vh;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.buttonContainer{
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  text-align: center;
+}
+
+.buttonContainer svg{
+  font-size: 4rem;
+}
+
+.conferenceView{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.conferenceView  video{
+  width: 33vw;
+  min-width: 15vw;
+  padding: 10px;
+  border-radius: 20px;
+}
+.conferenceViewWithChat{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 65vw;
+}
+
+.conferenceViewWithChat video {
+  width: 34vw;
+  min-width: 15vw;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* chat section */
+.chatRoom{
+  position: absolute;
+  height: 85vh;
+  width: 31vw;
+  right:0;
+  background-color: aliceblue;
+  border-radius: 7px;
+  margin: 10px 10px 0px 0px;
+  padding-inline: 10px;
+}
+.chattingDisplay{
+  height: 76vh;        
+  overflow-y: auto;
+}
+.chatingArea{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding-bottom:20px;
+  padding-left: 15px;
+  gap: 2rem;
+  /* width: 30vw; */
+}
+.chatMessages{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.userChat{
+  /* height: 35px; */
+  margin-bottom: -10px;
+  margin-inline: 5px;
+  background-color: blue;
+  padding: 10px;
+  align-content: center;
+  color: white;
+  align-self: flex-end;
+  border-radius: 12px 0px 20px 12px;
+  font-size: 1.2rem ;
+}
+.otherChart{
+  /* height: 35px; */
+  height: auto;
+  margin-bottom: -10px;
+  margin-inline:5px;
+  background-color: blue;
+  padding: 10px;
+  align-content: center;
+  align-self:flex-start;
+  color: white;
+  border-radius: 0px 12px 12px 20px;
+  font-size: 1.2rem;
+}
+
+.chatInp{
+  width: 21vw;
+}
+
+.deletBtn{
+  display: flex;
+  justify-content: end;
+  color: red;
+}
+/* Start with HomeComponent Css */
+
+.navBar{
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:5px 30px;
+  text-align: center;
+  background-color: #f3edede3;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.navLeft a{
+  font-weight: 545;
+  text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+.navRight{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.HomeContainer{
+  display: flex;
+  justify-content: center;
+  height: 92.8vh;
+  gap: 10vw;
+  background-image: url('home-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover;
+}
+.leftPannel{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.leftPannel h2{
+  margin-bottom: 1.4rem;
+  font-weight: 540;
+}
+.leftPannelDown{
+  display: flex;
+  gap: 40px;
+}
+.leftPannelDown textarea{
+  width: 20vw;
+}
+.rightPanel {
+  display: flex;
+  align-items:center;
+}
+.rightPanel img{
+  height: 425px;
+}
+
+/* HistoryPage */
+.historyPage{
+  position: absolute;
+  right: 0;
+  background-color: white;
+  width: 25vw;
+  height: 92vh;
+  overflow-y: auto;
+}
+.historyItem{
+  margin-inline: 10px;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* homeComponent */
+  .navBar{
+    padding-inline: 5px;
+  }
+  .navRight{
+    display: none;
+  }
+  .rightPanel{
+    display: none;
+  }
+  .leftPannel{
+    margin-left: 0.5rem;
+    padding: 1rem;
+    margin-top: -5rem;
+  }
+  .leftPannelDown{
+    gap: 2px !important;
+  }
+  .leftPannelDown textarea{
+    width: 53vw;
+  }  
+  .historyPage{
+    width: 100vw;
+  }
+  /* videoMeetComponent */
+  .LobbySection{
+    display: flex;
+    flex-direction: column;
+  }
+  .onCamaraVideo video{
+    margin-top: 2rem;
+    width: 80vw !important;
+  }
+  .LobbySectionInp input{
+    width: 70vw;
+  }
+  .LobbySectionBtn button:nth-child(2){
+    margin-left: 2rem !important;
+  }
+
+  /* -------------- */
+  .buttonContainer svg{
+    font-size: 2rem;
+  }
+  .meetVideoContainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  .chatRoom{
+    height: auto;
+    width: 90vw;
+  }
+  .meetUserVideoWithChat{
+    border-radius: 15% !important;
+    height: 18vh;
+    width: 35vw;
+    border-radius: 10px;
+    right: 0.6rem;
+    bottom: 3.8rem;
+  }
+  .chatInp{
+    position: absolute;
+    width: 50vw !important;
+  }
+  .conferenceView{
+    all: unset !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* for signal Video */
+  .conferenceView video{
+    all: unset;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width:92.5vw;
+    height: auto;
+  }
+  /* with double video */
+
+}
