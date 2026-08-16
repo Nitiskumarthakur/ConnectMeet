@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const server_url = "http://localhost:1600";
+export const server_url = "https://connectmeet-znvm.onrender.com";
 
 const api = axios.create({
     baseURL:server_url,
