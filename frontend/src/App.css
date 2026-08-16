@@ -8,8 +8,8 @@
   width: 100vw;
   color: white;
   background: url("/background1.jpg") !important;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 .landingPageContainer nav{
   padding-block: 1rem;
@@ -67,8 +67,8 @@
 /* Authentication Folder */
 .authpagebg{
   background: url("/background1.jpg") !important;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   display: flex;
   justify-content: center;
   align-items: center;
