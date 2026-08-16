@@ -16,7 +16,7 @@ const io = connectToSocket(server);
 app.set("port", (process.env.PORT || 1600));
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://connectmeet01.vercel.app",
     methods:["GET", "POST"],
     credentials: true
 }));
