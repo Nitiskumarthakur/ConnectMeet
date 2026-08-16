@@ -163,10 +163,10 @@
   justify-content: center;
   height: 92.8vh;
   gap: 10vw;
-  background-image: url('home-bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;  
-  background-size: cover;
+  background-image: url('/home-bg.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;  
+  background-size: cover !important;
 }
 .leftPannel{
   height: 100%;
