@@ -11,7 +11,7 @@ export const connectToSocket = (server)=>{
     
     const io = new Server(server, {
         cors:{
-            origin:"http://localhost:5173",
+            origin:"https://connectmeeted.vercel.app",
             methods:["GET","POST"],
             // allowedHeaders:["*"],
             credentials:true
