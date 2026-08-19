@@ -11,7 +11,7 @@ export const register = async (req, res) => {
         const existingUser = await User.findOne({ username });
         // console.log(existingUser)
         if (existingUser) {
-            return res.status(httpStatus.CONFLICT).json({ message: "User already exits" });
+            return res.status(httpStatus.CONFLICT).json({ message: "Username already exits" });
         }
         const hashPassword = await bcrypt.hash(password, 10);
 
@@ -21,7 +21,7 @@ export const register = async (req, res) => {
             password: hashPassword
         });
         await newUser.save();
-        res.status(httpStatus.CREATED).json({ message: "User Registered" });
+        res.status(httpStatus.CREATED).json({ message: "Welcome! Your account has been created successfully." });
 
     } catch (err) {
         res.json({ message: `Something wrong ${err}` });
@@ -50,7 +50,7 @@ export const login = async (req, res) => {
         let token = crypto.randomBytes(20).toString("hex");
         user.token = token;
         await user.save();
-        return res.status(200).json({token, username, message: "User Login", });            
+        return res.status(200).json({token, username, message: "Welcome back! You`re signed in successfully.", });            
 
     } catch (err) {
         console.log("54: ",err);
